@@ -10,4 +10,4 @@ This system is part of the Physia project. Its main function is to measure the M
 
 To experience with this project, you can utilize the Wokwi platform. Just click on the provided link to access the project:
 
-[Simulate Physia Device on Wokwi](https://wokwi.com/projects/381509215773585409)
+[Simulate Physia Device on Wokwi](https://wokwi.com/projects/403720240465233921)
