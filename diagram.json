@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 113.54,
+      "left": -169.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 9.9, "left": 33, "attrs": { "humidity": "57" } },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 37.1, "left": -432.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 133.1, "left": -432.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot3", "top": 219.5, "left": -432.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot4", "top": 325.1, "left": -432.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot5", "top": 421.1, "left": -432.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot6", "top": -58.9, "left": -432.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot6:SIG", "esp:4", "green", [ "h66.8", "v192", "h67.2", "v86.4" ] ],
+    [ "pot1:SIG", "esp:4", "green", [ "h66.8", "v96", "h67.2", "v86.4" ] ],
+    [ "pot2:SIG", "esp:4", "green", [ "h66.8", "v86.4" ] ],
+    [ "pot3:SIG", "esp:4", "green", [ "h66.8", "v86.4" ] ],
+    [ "pot4:SIG", "esp:35", "green", [ "h66.8", "v-105.6" ] ],
+    [ "pot5:SIG", "esp:4", "green", [ "h66.8", "v-201.6" ] ],
+    [ "pot6:SIG", "esp:34", "black", [ "h134", "v163.2", "h182.4" ] ],
+    [ "pot2:SIG", "esp:34", "black", [ "h134", "v-28.8", "h182.4" ] ],
+    [ "pot3:SIG", "esp:34", "black", [ "h134", "v-115.2", "h182.4" ] ],
+    [ "pot4:SIG", "esp:34", "black", [ "h134", "v-220.8", "h182.4" ] ],
+    [ "pot1:SIG", "esp:34", "black", [ "h134", "v67.2", "h182.4" ] ],
+    [ "pot5:SIG", "esp:34", "black", [ "h134", "v-316.8", "h182.4" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "dht1:VCC", "esp:5V", "red", [ "v28.8", "h-259.2" ] ],
+    [ "dht1:SDA", "esp:16", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
